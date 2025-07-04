@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Our Little Sister</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #realtime-clock {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffcc;
+      z-index: 10;
+    }
+
+    .page {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    #home-page {
+      background-image: url('https://cdn.pixabay.com/photo/2021/05/04/21/29/clock-6229748_1280.jpg');
+      display: flex;
+    }
+
+    #surprise-page {
+      background-image: url('https://i.pinimg.com/originals/b2/10/d6/b210d63f58da7bb2cc06073584981fe7.jpg'); /* Replace with actual image */
+      background-blend-mode: darken;
+      background-color: rgba(244, 12, 101, 0.5);
+      padding: 40px;
+    }
+
+    .surprise-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      z-index: 10;
+    }
+
+    .surprise-button:hover {
+      transform: scale(1.1);
+    }
+
+  .message-box {
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+
+    h1 {
+      font-size: 36px;
+      color: #ffc0cb;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #ffebf2;
+    }
+
+    /* 🎉 Animated vertical heading */
+    .animated-heading {
+      font-family: 'Pacifico', cursive;
+      font-size: 64px;
+      color: #fff;
+      background: linear-gradient(90deg, #ff4d4d, #ffcc00, #66ff66, #66ccff, #cc66ff);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animateText 6s ease-in-out infinite;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .animated-heading span {
+      display: block;
+    }
+
+    @keyframes animateText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Clock -->
+  <div id="realtime-clock">--:--:--</div>
+
+  <!-- Main Birthday Page -->
+  <div id="home-page" class="page">
+    <div class="animated-heading">
+      <span>🎉 Happy</span>
+      <span>Birthday</span>
+      <span>Aditi Mishra 🎂</span>
+    </div>
+    <img src="https://i.imgflip.com/4k81vh.gif" alt="Surprise" class="surprise-button" onclick="showSurprise()" title="Click for a surprise 🎁">
+  </div>
+
+  <!-- Surprise Message Page -->
+  <div id="surprise-page" class="page">
+    <div class="message-box">
+      <h1>Happy Birthday to the Sweetest Sister! 🎂🎈</h1>
+      <p>
+        Dear sister,<br><br>
+        On this special day, we just want to tell you how incredibly precious you are to us.<br>
+        Your laughter lights up every room you enter, and your kindness touches every heart.<br>
+        You’re growing into an amazing person, full of dreams, talent, and love.<br>
+        Watching you grow each year is like reading a beautiful book — with each page even better than the last.<br>
+        May your birthday be filled with cake, joy, and everything pink and perfect.<br>
+        You are a blessing, a miracle, and our bundle of endless love.<br>
+        Stay silly, stay smart, stay strong — just as you are!<br>
+        Here’s to your biggest smile and your brightest days ahead!<br>
+        We love you more than words can ever say!<br><br>
+        💖 With love from all of us 💖
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById("realtime-clock").innerText = time;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function showSurprise() {
+      document.getElementById("home-page").style.display = "none";
+      document.getElementById("surprise-page").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
