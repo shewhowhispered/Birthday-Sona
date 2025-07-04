@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Our Little Sister</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Happy Birthday Aditi</title>
   <style>
     * {
       margin: 0;
@@ -13,198 +11,102 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
       height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      position: relative;
-    }
-
-    #realtime-clock {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 24px;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ffcc;
-      z-index: 10;
-    }
-
-    .page {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
+      background: url('https://c.tenor.com/7GAidWguFMsAAAAC/fantasy.gif') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: none;
+      font-family: 'Segoe UI', sans-serif;
+      color: #b71c43;
+      display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      flex-direction: column;
+      overflow: hidden;
       padding: 20px;
     }
 
-    #home-page {
-      background-image: url('https://cdn.pixabay.com/photo/2021/05/04/21/29/clock-6229748_1280.jpg');
-      display: flex;
-    }
-
-    #surprise-page {
-      background-image: url('https://media.tenor.com/KkokyQje73QAAAAC/magestic-unicorn.gif');
-      background-blend-mode: darken;
-      background-color: rgba(244, 12, 101, 0.5);
-      padding: 40px;
-    }
-
-    .surprise-button {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 100px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      z-index: 10;
-    }
-
-    .surprise-button:hover {
-      transform: scale(1.1);
-    }
-
     .message-box {
-      background-color: transparent;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
       padding: 30px;
       border-radius: 20px;
-      max-width: 800px;
-      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
-      backdrop-filter: blur(4px);
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
     }
 
-    h1 {
-      font-size: 36px;
+    .message-box h1 {
       color: #ffc0cb;
+      font-size: 28px;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 20px;
+    .message-box p {
+      font-size: 18px;
       line-height: 1.8;
-      color: #ffebf2;
+      color: #fff0f5;
     }
 
-    .animated-heading {
-      font-family: 'Pacifico', cursive;
-      font-size: 64px;
-      color: #fff;
-      background: linear-gradient(90deg, #ff4d4d, #ffcc00, #66ff66, #66ccff, #cc66ff);
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: animateText 6s ease-in-out infinite;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      margin-bottom: 40px;
-      line-height: 1.5;
+    /* 🦋 Butterfly Animation */
+    .butterfly {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: url('https://i.pinimg.com/originals/46/d1/52/46d15294e3942a362775938d01523bed.gif') no-repeat center;
+      background-size: contain;
+      animation: fly 12s linear infinite;
+      z-index: 5;
     }
 
-    .animated-heading span {
-      display: block;
-    }
-
-    @keyframes animateText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* 🎯 Mobile responsiveness */
-    @media screen and (max-width: 768px) {
-      .animated-heading {
-        font-size: 36px;
+    @keyframes fly {
+      0% {
+        top: 100%;
+        left: -10%;
+        transform: rotate(0deg);
       }
-
-      h1 {
-        font-size: 24px;
+      50% {
+        top: 30%;
+        left: 50%;
+        transform: rotate(180deg);
       }
-
-      p {
-        font-size: 16px;
-        padding: 0 10px;
+      100% {
+        top: 0%;
+        left: 110%;
+        transform: rotate(360deg);
       }
+    }
 
+    @media (max-width: 600px) {
       .message-box {
         padding: 20px;
-        max-width: 95%;
       }
-
-      .surprise-button {
-        width: 70px;
-        bottom: 10px;
-        right: 10px;
+      .message-box h1 {
+        font-size: 22px;
       }
-
-      #realtime-clock {
+      .message-box p {
         font-size: 16px;
-        padding: 6px 12px;
       }
     }
-
   </style>
 </head>
 <body>
 
-  <!-- Clock -->
-  <div id="realtime-clock">--:--:--</div>
+  <div class="butterfly"></div>
 
-  <!-- Main Birthday Page -->
-  <div id="home-page" class="page">
-    <div class="animated-heading">
-      <span>🎉 Happy</span>
-      <span>Birthday</span>
-      <span>Aditi Mishra 🎂</span>
-    </div>
-    <img src="https://i.imgflip.com/4k81vh.gif" alt="Surprise" class="surprise-button" onclick="showSurprise()" title="Click for a surprise 🎁">
+  <div class="message-box">
+    <h1>Happy Birthday to the Sweetest Sister! 🎂🎈</h1>
+    <p>
+      Dear sister,<br><br>
+      On this special day, we just want to tell you how incredibly precious you are to us.<br>
+      Your laughter lights up every room you enter, and your kindness touches every heart.<br>
+      You’re growing into an amazing person, full of dreams, talent, and love.<br>
+      Watching you grow each year is like reading a beautiful book — with each page even better than the last.<br>
+      May your birthday be filled with cake, joy, and everything pink and perfect.<br>
+      You are a blessing, a miracle, and our bundle of endless love.<br>
+      Stay silly, stay smart, stay strong — just as you are!<br>
+      Here’s to your biggest smile and your brightest days ahead!<br>
+      We love you more than words can ever say!<br><br>
+      💖 With love from all of us 💖
+    </p>
   </div>
 
-  <!-- Surprise Message Page -->
-  <div id="surprise-page" class="page">
-    <div class="message-box">
-      <h1>Happy Birthday to the Sweetest Sister! 🎂🎈</h1>
-      <p>
-        Dear sister,<br><br>
-        On this special day, we just want to tell you how incredibly precious you are to us.<br>
-        Your laughter lights up every room you enter, and your kindness touches every heart.<br>
-        You’re growing into an amazing person, full of dreams, talent, and love.<br>
-        Watching you grow each year is like reading a beautiful book — with each page even better than the last.<br>
-        May your birthday be filled with cake, joy, and everything pink and perfect.<br>
-        You are a blessing, a miracle, and our bundle of endless love.<br>
-        Stay silly, stay smart, stay strong — just as you are!<br>
-        Here’s to your biggest smile and your brightest days ahead!<br>
-        We love you more than words can ever say!<br><br>
-        💖 With love from all of us 💖
-      </p>
-    </div>
-  </div>
-
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const time = now.toLocaleTimeString();
-      document.getElementById("realtime-clock").innerText = time;
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    function showSurprise() {
-      document.getElementById("home-page").style.display = "none";
-      document.getElementById("surprise-page").style.display = "flex";
-    }
-  </script>
 </body>
 </html>
