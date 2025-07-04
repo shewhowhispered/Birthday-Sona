@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Our Little Sister</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
@@ -47,6 +48,7 @@
       align-items: center;
       text-align: center;
       flex-direction: column;
+      padding: 20px;
     }
 
     #home-page {
@@ -55,7 +57,7 @@
     }
 
     #surprise-page {
-      background-image: url('https://i.pinimg.com/originals/b2/10/d6/b210d63f58da7bb2cc06073584981fe7.jpg'); /* Replace with actual image */
+      background-image: url('https://media.tenor.com/KkokyQje73QAAAAC/magestic-unicorn.gif');
       background-blend-mode: darken;
       background-color: rgba(244, 12, 101, 0.5);
       padding: 40px;
@@ -75,15 +77,14 @@
       transform: scale(1.1);
     }
 
-  .message-box {
-  background-color: transparent;
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 800px;
-  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
-  backdrop-filter: blur(4px);
-}
-
+    .message-box {
+      background-color: transparent;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+      backdrop-filter: blur(4px);
+    }
 
     h1 {
       font-size: 36px;
@@ -97,7 +98,6 @@
       color: #ffebf2;
     }
 
-    /* 🎉 Animated vertical heading */
     .animated-heading {
       font-family: 'Pacifico', cursive;
       font-size: 64px;
@@ -120,6 +120,38 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    /* 🎯 Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      .animated-heading {
+        font-size: 36px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .message-box {
+        padding: 20px;
+        max-width: 95%;
+      }
+
+      .surprise-button {
+        width: 70px;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      #realtime-clock {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
     }
 
   </style>
